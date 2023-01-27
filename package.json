@@ -1,6 +1,6 @@
 {
-  "homepage": "beam.clifford.codes",
   "name": "beam",
+  "homepage": "https://beam.clifford.codes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
