@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, Transition } from "react-transition-group";
 import { sitePaths } from './app-data';
+import { enter, exit } from './timelines'; // https://css-tricks.com/animating-between-views-in-react/
 
 import "./App.scss"
 
@@ -23,23 +24,33 @@ import Footer from './components/footer';
 
 function App() {
   const location = useLocation();
+  const { pathname, key } = location;
+  const prevPathname = null;
 
   return (
     <div className="">
       <Header sitePaths={sitePaths}/>
-      <main className="container">
+      
         <TransitionGroup component={null}>
-          <CSSTransition key={location.key} classNames="fade" timeout={300}>
-              <Routes location={location}>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="/series" element={<Series/>} />
-                <Route path="/features" element={<Features/>} />
-                <Route path="/sign-in" element={<SignIn/>} />
-                <Route path="/sign-up" element={<SignUp/>} />
-              </Routes>
-          </CSSTransition>
+          <Transition
+            key={key}
+            appear={true}
+            onEnter={(node) => enter(node, pathname, prevPathname)}
+            onExit={(node) => exit(node, pathname, prevPathname)}
+            timeout={{enter: 500, exit: 500 }}
+            >
+              <main className="container" style={{position: 'relative', height: '100%'}}>
+                <Routes location={location}>
+                  <Route exact path="/" element={<Home/>}  />
+                  <Route path="/series" element={<Series/>} />
+                  <Route path="/features" element={<Features/>} />
+                  <Route path="/sign-in" element={<SignIn/>} />
+                  <Route path="/sign-up" element={<SignUp/>} />
+                </Routes>
+              </main>
+          </Transition>
         </TransitionGroup>
-      </main>
+      
       <Footer sitePaths={sitePaths}/>
     </div>
   );
