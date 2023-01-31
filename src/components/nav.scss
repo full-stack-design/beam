@@ -1,0 +1,32 @@
+nav {
+  color: var(--body-copy-color);
+
+  .navbar-nav {
+    .nav-item {
+      margin-inline: var(--size-1);
+
+      .nav-link {
+        padding-inline: var(--size-3);
+        color: inherit;
+      }
+    }
+  }
+}
+
+header nav {
+  display: flex;
+  flex: 1 1 0;
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    
+    .nav-item {
+      list-style-type: none;
+      
+      .nav-link {
+        color: inherit;
+      }
+    }
+  }
+}
