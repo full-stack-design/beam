@@ -22,6 +22,13 @@ export const sitePaths =
       type: "nav"
     },
     {
+      path: "/hubs",
+      title: "Hubs",
+      element: "<Hubs/>",
+      className: "",
+      type: "nav"
+    },
+    {
       path: "/sign-in",
       title: "Sign In",
       element: "<SignIn/>",

@@ -6,11 +6,13 @@ import { enter, exit } from './timelines'; // https://css-tricks.com/animating-b
 
 import "./App.scss"
 
-import Home from "./views/home";
-import Series from "./views/series";
-import Features from "./views/features";
-import SignIn from "./views/sign-in";
-import SignUp from "./views/sign-up";
+import Home from "./pages/home";
+import Series from "./pages/series";
+import Features from "./pages/features";
+import Hubs from "./pages/hubs";
+import SignIn from "./pages/sign-in";
+import SignUp from "./pages/sign-up";
+import NotFound from "./pages/not-found";
 
 import Header from './components/header';
 import Footer from './components/footer';
@@ -44,8 +46,10 @@ function App() {
                   <Route exact path="/" element={<Home/>}  />
                   <Route path="/series" element={<Series/>} />
                   <Route path="/features" element={<Features/>} />
+                  <Route path="/hubs" element={<Hubs/>} />
                   <Route path="/sign-in" element={<SignIn/>} />
                   <Route path="/sign-up" element={<SignUp/>} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
           </Transition>
