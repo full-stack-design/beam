@@ -8,7 +8,7 @@ const Nav = ({ sitePaths, className }) => {
       <ul id="site-navigation" className='navbar-nav'>
         {sitePaths.filter(item => item.type === 'nav').map(({ path, title, className, type }) => (
           <li key={path} className='nav-item'>
-            !!<Link className={className + ' ' + 'nav-link'} to={path}>{title}</Link>
+            !<Link className={className + ' ' + 'nav-link'} to={path}>{title}</Link>
           </li>
         ))}
       </ul>
