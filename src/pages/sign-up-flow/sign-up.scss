@@ -1,0 +1,12 @@
+article.sign-up {
+  nav {
+    display: flex;
+    justify-content: center;
+    a {
+      padding-inline: var(--size-3);
+      padding-block: var(--size-1);
+      margin-inline: var(--size-1);
+      background-color: rebeccapurple;
+    }
+  }
+}

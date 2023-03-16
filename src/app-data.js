@@ -36,7 +36,7 @@ export const sitePaths =
       type: "cta"
     },
     {
-      path: "/sign-up",
+      path: "/sign-up/begin",
       title: "Sign Up",
       element: "<SignUp/>",
       className: "btn btn-primary",

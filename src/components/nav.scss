@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   color: var(--body-copy-color);
 
   .navbar-nav {
@@ -30,3 +32,12 @@ header nav {
     }
   }
 }
+
+// #site-navigation.navbar-nav {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   width: 320px;
+//   background-color: rebeccapurple;
+// }

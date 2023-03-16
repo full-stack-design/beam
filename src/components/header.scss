@@ -1,0 +1,100 @@
+.navbar {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin: 0;
+    }
+
+    .header__hamburger {
+      position: relative;
+      width: 40px;
+      display: block;
+      display: flex;
+      align-items: center;
+      border: none;
+      background: none;
+      aspect-ratio: 1/1;
+      outline: none;
+    }
+
+    .header__hamburger svg {
+      // width: 100%;
+
+      // rect {
+      //   border-radius: 4px;
+      // }
+    }
+
+    .header__hamburger__line {
+      // width: 40px;
+      // height: 4px;
+      display: block;
+      // border-radius: 4px;
+      background-color: #333;
+    }
+
+    .header__hamburger {
+      // width: 1.61rem;
+      // margin-right: 1rem;
+      // border: none;
+      // background: none;
+      // position: relative;
+      // isolation: isolate;
+
+      // &::before, &::after {
+      //   position: absolute;
+      //   content: "";
+      //   left: 0;
+      //   width: 100%;
+      //   background-color: currentColor;
+      //   height: 0.25em;
+      //   border-radius: 0.25em;
+      // }
+      // &::before {
+      //   top: 0.5em;
+      // }
+      // &::after {
+      //   bottom: 0.5em;
+      // }
+    }
+  }
+
+
+}
+
+/** ---------- Nav ---------- */
+@supports (backdrop-filter: blur(4px)) {
+  header.navbar.scrolled {
+    transition: all 2000ms var(--slate-ease-sine);
+    backdrop-filter: blur(4px) brightness(100%);
+  }
+}
+
+// .voices-header-parent > .voices-header nav .nav-item .btn {
+//   margin-right: 1rem;
+//   background-color: var(--slate-clr-black-t20);
+//   color: var(--page-color);
+// }
+// .voices-header-parent > .voices-header nav .nav-item:last-of-type .btn {
+//   margin-right: 0;
+// }
+// .voices-header-parent > .voices-header nav .nav-item .btn--secondary-outlined:hover {
+//   background-color: var(--slate-clr-black-t40);
+// }
+// .voices-header-parent > .voices-header nav .nav-item .btn--tertiary {
+//   border-color: var(--page-color);
+// }
+// .voices-header-parent > .voices-header nav .nav-item .btn--tertiary:hover {
+//   border-color: var(--page-color);
+//   background-color: var(--page-color);
+//   color: var(--slate-clr-violet) !important;
+// }

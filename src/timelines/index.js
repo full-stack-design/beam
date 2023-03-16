@@ -21,7 +21,7 @@ const DRIFTIN = "80px";
 const DRIFTOUT = "-80px";
 const ROTATIONIN = 0;
 const ROTATIONOUT = -0;
-const HEADERHEIGHT = 74; // TODO get actual header.outterHeight
+const HEADERHEIGHT = 0; // TODO get actual header.outterHeight
 const EASE = Power2.easeInOut;
 
 /* ENTER ANIMATION TIMELINES */

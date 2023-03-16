@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './nav';
+import './footer.scss';
 
 const Footer = ({ sitePaths }) => {
   return (
