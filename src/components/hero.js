@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      HERO
+      Hello Hero!
     </section>
   );
 };
